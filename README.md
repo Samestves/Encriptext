@@ -1,2 +1,2 @@
-# textEncrypt
+# Encryptext
 Encryptador de Texto
