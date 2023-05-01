@@ -36,9 +36,20 @@ body {
     border-radius: 15px;
     width: 100%;
     max-width: 600px;
+    height: 400px; /* Ajusta el valor de la altura según sea necesario */
     resize:none;
     outline: none;
     background-color: #fefefe;
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+.mi-Input::-webkit-input-placeholder {
+    text-align: center;
+    line-height: 350px;
+    opacity: 0.5;
+    font-family: Montserrat;
+    font-weight: 750;
 }
 
 .aviso {
