@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #14213D;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1 {
+    margin: 0 0 1rem 0;
+    color: #fefefe;
+    font-family: Montserrat;
+    font-size: 0.65rem;
+    font-weight: 600;
+}
+
+.container span {
+    font-weight: 800;
+}
+
+.aluraLogo {
+    margin: 1rem 0 1rem 0;
+}
+
+.mi-Input {
+    box-sizing: border-box;
+    height: 23rem;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 600px;
+    resize:none;
+    outline: none;
+    background-color: #fefefe;
+}
+
+.aviso {
+    color: #FCA311;
+    font-family: Montserrat;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.encryptar {
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    height: 4rem;
+    width: 100%;
+    max-width: 17.3rem;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    background-color: #44eb8c;
+}
+
+.desencryptar {
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    height: 4rem;
+    width: 100%;
+    max-width: 17.3rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    background-color: #44eb8c;
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ajusta el ancho según tus necesidades */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* From https://css.glass */
+    background: #14213D(255, 255, 255, 0.15);
+    box-shadow: 0 4px 30px #14213D(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+#modal-content {
+    box-sizing: border-box;
+    position: relative;
+    background-color: #fefefe;
+    padding: 2.5rem;
+    max-height: 70%;
+    overflow-y: auto;
+    width: 98%;
+    max-width: 300px;
+    margin: 0 1.5rem 0 1.5rem;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-family: Montserrat;
+    font-size: 1.2rem;
+    font-weight: 500;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+/* Para ocultar la barra de scroll en Chrome y Safari */
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+#modal-content .botonCopiar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.fa-copy {
+    color: #33549b;
+}
