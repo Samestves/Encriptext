@@ -119,6 +119,7 @@ body {
     font-weight: 500;
     word-wrap: break-word;
     text-align: center;
+    touch-action: none;
 }
 
 /* Para ocultar la barra de scroll en Chrome y Safari */
