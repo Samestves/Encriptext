@@ -6,28 +6,40 @@ body {
     background-color: #001d3d;
 }
 
+.containerOne {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.containerOne h1 {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    font-family: Montserrat;
+    color: #fefefe;
+    font-weight: 500;
+}
+
+.containerOne span {
+    font-weight: 800;
+}
+
+.containerOne img {
+    display: inline-block; /* Para que se muestren en línea y no en bloque */
+    margin-top: 10px;
+    margin-left: 10px; /* Para agregar un margen a la izquierda */
+    width: 1rem; /* Ancho deseado */
+    height: 1rem; /* Alto deseado */
+}
+
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-height: 50vh;
-}
-
-.container h1 {
-    margin: 0 0 1rem 0;
-    color: #fefefe;
-    font-family: Montserrat;
-    font-size: 0.65rem;
-    font-weight: 600;
-}
-
-.container span {
-    font-weight: 800;
-}
-
-.aluraLogo {
-    margin: 1rem 0 1rem 0;
 }
 
 .mi-Input {
@@ -38,11 +50,12 @@ body {
     border: 1px solid transparent;
     border-radius: 15px;
     width: 100%;
-    max-width: 600px;
+    max-width: 630px;
     height: 400px; /* Ajusta el valor de la altura según sea necesario */
     resize:none;
     outline: none;
     background-color: #fefefe;
+    font-size: 1.3rem;
     font-family: Montserrat;
     font-weight: 600;
 }
@@ -64,35 +77,73 @@ body {
     text-align: center;
 }
 
+.containerBtnes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .encryptar {
     font-family: Montserrat;
     font-size: 1.5rem;
-    height: 4rem;
+    height: 5rem;
     width: 100%;
     max-width: 17.3rem;
-    margin-bottom: 1rem;
+    margin: 1rem;
+    padding: 1rem;
     border: 1px solid transparent;
     border-radius: 10px;
     outline: none;
     text-align: center;
     cursor: pointer;
     color: #fefefe;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
     background-color: #000814;
+}
+
+.encryptar:hover {
+    background-color: #44eb8c;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    border: 1px solid black;
+    color: black;
+}
+
+.desencryptar:hover {
+    background-color: #44eb8c;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    color: #000;
+    border: 1px solid black;
 }
 
 .desencryptar {
     font-family: Montserrat;
     font-size: 1.5rem;
-    height: 4rem;
+    height: 5rem;
     width: 100%;
     max-width: 17.3rem;
-    margin-bottom: 3rem;
+    margin: 1rem;
+    padding: 1rem;
     border: 1px solid transparent;
     border-radius: 10px;
     outline: none;
     text-align: center;
     cursor: pointer;
     color: #fefefe;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
     background-color: #000814;
 }
 
@@ -152,70 +203,27 @@ body {
     color: #33549b;
 }
 
-@media screen and (min-width: 650px){
+@media screen and (min-width: 1100px){
 
-    .container {
+    .containerOne {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        flex-direction: row-reverse;
+        justify-content: space-between;
         align-items: center;
-        max-height: 50vh;
+        margin: 0.5rem;
+        margin-bottom: 2.5rem;
+        margin-top: 1rem;
+        margin-left: 2rem;
+        margin-right: 3rem;
     }
 
-    h1 {
-        display: none;
+    .containerOne h1 {
+        margin: 0;
+        margin-bottom: 0rem;
     }
 
     .aviso {
         margin-top: 1.5rem;
         margin-bottom: 1rem;    
-    }
-
-    .encryptar {
-        margin: 0;
-        margin: 0.6rem;
-        height: 5rem;
-        width: 100%;
-        max-width: 17.3rem;
-        cursor: pointer;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        -webkit-transition-duration: 0.3s;
-        transition-duration: 0.3s;
-        -webkit-transition-property: box-shadow, transform;
-        transition-property: box-shadow, transform;
-        background-color: #000814;
-    }
-
-    .desencryptar {
-        margin: 0;
-        margin: 0.6rem;
-        height: 5rem;
-        width: 100%;
-        max-width: 17.3rem;
-        cursor: pointer;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        -webkit-transition-duration: 0.3s;
-        transition-duration: 0.3s;
-        -webkit-transition-property: box-shadow, transform;
-        transition-property: box-shadow, transform;
-        background-color: #000814;
-    }
-
-    .encryptar:hover {
-        background-color: #44eb8c;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-        border: 1px solid black;
-        color: black;
-    }
-
-    .desencryptar:hover {
-        background-color: #44eb8c;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-        color: #000;
-        border: 1px solid black;
     }
 }
