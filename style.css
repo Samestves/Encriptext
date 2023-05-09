@@ -11,10 +11,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
 }
 
 .containerOne h1 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     margin-bottom: 1.5rem;
     font-size: 1rem;
     font-family: Montserrat;
@@ -22,8 +24,13 @@ body {
     font-weight: 500;
 }
 
+.containerOne svg {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .containerOne span {
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .containerOne img {
@@ -34,12 +41,18 @@ body {
     height: 1rem; /* Alto deseado */
 }
 
-.container {
+.containerOne i {
+    color: #fefefe;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.containerTwo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-height: 50vh;
+    max-height: 60vh;
 }
 
 .mi-Input {
@@ -50,7 +63,7 @@ body {
     border: 1px solid transparent;
     border-radius: 15px;
     width: 100%;
-    max-width: 630px;
+    max-width: 750px;
     height: 400px; /* Ajusta el valor de la altura según sea necesario */
     resize:none;
     outline: none;
@@ -60,13 +73,15 @@ body {
     font-weight: 600;
 }
 
-.mi-Input::-webkit-input-placeholder {
-    text-align: center;
-    line-height: 350px;
+.mi-Input::placeholder {
     opacity: 0.5;
     font-family: Montserrat;
     font-weight: 750;
     font-size: 1.3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .aviso {
@@ -116,15 +131,6 @@ body {
     color: black;
 }
 
-.desencryptar:hover {
-    background-color: #44eb8c;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    color: #000;
-    border: 1px solid black;
-}
-
 .desencryptar {
     font-family: Montserrat;
     font-size: 1.5rem;
@@ -147,6 +153,15 @@ body {
     background-color: #000814;
 }
 
+.desencryptar:hover {
+    background-color: #44eb8c;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    color: #000;
+    border: 1px solid black;
+}
+
 #modal {
     position: fixed;
     top: 0;
@@ -166,12 +181,12 @@ body {
 #modal-content {
     box-sizing: border-box;
     position: relative;
-    background-color: #fefefe;
+    background-color: #eff1f3;
     padding: 2.5rem;
-    max-height: 70%;
+    max-height: 100%;
     overflow-y: auto;
-    width: 98%;
-    max-width: 300px;
+    width: 100%;
+    max-width: 500px;
     margin: 0 1.5rem 0 1.5rem;
     border: 1px solid black;
     border-radius: 2rem;
@@ -220,6 +235,11 @@ body {
     .containerOne h1 {
         margin: 0;
         margin-bottom: 0rem;
+    }
+
+    .containerOne svg {
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     .aviso {

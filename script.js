@@ -46,7 +46,19 @@ window.addEventListener("click", (event) => {
   }
 });
 
-
+function validateInput() {
+  var textarea = document.getElementsByName("inputTextArea")[0];
+  var pattern = /^[a-zA-Z\s]*$/;
+  var text = textarea.value;
+  var newText = "";
+  for (var i = 0; i < text.length; i++) {
+    var char = text.charAt(i);
+    if (pattern.test(char)) {
+      newText += char;
+    }
+  }
+  textarea.value = newText;
+}
 
 function encryptMessage() {
     
